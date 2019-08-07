@@ -1,0 +1,48 @@
+{
+ "config": {
+   "name":    "$npm_package_name",
+   "version": "$npm_package_version",
+ },
+ "private": true,
+ "publishConfig": {"access":"restricted", "tag":"latest"},
+ "name": "clavis-translucens-comms",
+!!! "short_name": "!!!!!!Zeit:OTDb!!!!!!",
+ "description":          "Clavis Translucens Communications App - an unusually secure comms app (chat functionality as seen in typical instant messaging apps and secure peer-to-peer images, documents and generic files exchange. Voice communication is to be introduced later.",
+ "version":              "0.0.1",
+ "author":               {"name":"Maxim Zhukov", "email":"mzhukov31415dev@gmail.com", "url":"https://github.com/mzhukov1973"},
+ "license":              "Apache-2.0",
+ "main":                 "app/background.js",
+ "engines":              {"node":">=12.8.0"},
+ "os":                   ["darwin", "linux",  "win32"],
+ "homepage":             "https://clavis-translucens-comms.umbra-translucens.online",
+ "repository":           {"type":"git", "url":"git+https://github.com/mzhukov1973/clavis-translucens-comms.git"},
+ "bugs":                 {"email":"mzhukov31415dev@gmail.com", "url":"https://github.com/mzhukov1973/clavis-translucens-comms/issues"},
+ "keywords":             ["communications", "secure", "encrypted", "messaging", "javascript", "jsx", "next", "react", "umbra-translucens"],
+ "bundleDependencies":   ["@babel/runtime-corejs3", "yargs", "electron-serve", "electron-store"],
+ "peerDependencies":     {},
+ "optionalDependencies": {},
+ "dependencies": {
+   "electron-serve": "latest",
+   "electron-store": "latest",
+   "@babel/runtime-corejs3": "latest",
+   "yargs": "next"
+ },
+ "devDependencies": {
+   "@material-ui/core": "latest",
+   "electron": "latest",
+   "electron-builder": "latest",
+   "next": "latest",
+   "nextron": "latest",
+   "react": "latest",
+   "react-dom": "latest"
+ },
+ "scripts": {
+   "dev": "nextron",
+   "build": "nextron build",
+   "postinstall": "electron-builder install-app-deps"
+ },
+ "babel": {
+   "presets": [["@babel/preset-env", {"targets":{"node":true}}]],
+   "plugins": [["@babel/plugin-transform-runtime", {"absoluteRuntime":false, "corejs":{"version":3, "proposals":true}, "helpers":true, "regenerator":true, "useESModules":false}]]
+ }
+}
