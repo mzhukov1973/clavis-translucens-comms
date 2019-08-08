@@ -1,6 +1,5 @@
-productName: Clavis Translucens Communications App
+productName: Clavis Vitrea Communications App
 appId: online.umbra-translucens.${name}
-copyright: Copyright © 2019 Maxim Zhukov
 copyright: Copyright © 2019 ${author}
 
 asar: true
