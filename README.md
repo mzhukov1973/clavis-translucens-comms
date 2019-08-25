@@ -7,3 +7,4 @@
 ##### License: *Apache 2.0*
 ##### Roadmap:
  - A placeholder item - trying out Zulip integration
+ - A second placeholder item.
