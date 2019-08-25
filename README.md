@@ -5,3 +5,5 @@
 ##### Author: *Maxim Zhukov ([`mzhukov31415dev@gmail.com`](mailto:mzhukov31415dev@gmail.com) / [`GitHub`](https://github.com/mzhukov1973))*
 ##### Version: *`0.0.1`*
 ##### License: *Apache 2.0*
+##### Roadmap:
+ - A placeholder item - trying out Zulip integration
