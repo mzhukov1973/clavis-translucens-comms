@@ -1,153 +1,168 @@
 {
- "config": {
-  "_name": "$npm_package_name",
-  "_long_name": "Clavis Vitrea Communications App",
-  "_version": "$npm_package_version",
-  "_exec_basename": "ClavisVitreaComms"
- },
- "private": true,
- "publishConfig": {
-    "access": "restricted",
-    "tag": "latest"
- },
- "name": "clavis-vitrea-comms",
- "short_name": "ClavisVitrea:Comms|ᵦ",
- "description": "Clavis Vitrea Communications App - an unusually secure comms app (chat functionality as seen in typical instant messaging apps and secure peer-to-peer images, documents and generic files exchange. Voice communication is to be introduced later.",
- "version": "0.1.1-alpha.1",
- "author": {
-    "name": "Maxim Zhukov",
-    "email": "mzhukov31415dev@gmail.com",
-    "url": "https://github.com/mzhukov1973"
- },
- "license": "Apache-2.0",
- "main": "app/background.js",
- "engines": {
-    "node": ">=12.8.0"
- },
- "os": [
-    "linux"
- ],
- "homepage": "https://clavis-vitrea-comms.umbra-translucens.online",
- "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mzhukov1973/clavis-vitrea-comms.git"
- },
- "bugs": {
-    "email": "mzhukov31415dev@gmail.com",
-    "url": "https://github.com/mzhukov1973/clavis-vitrea-comms/issues"
- },
- "keywords": [
-    "communications",
-    "secure",
-    "encrypted",
-    "messaging",
-    "javascript",
-    "jsx",
-    "next",
-    "react"
- ],
- "bundleDependencies": [
-    "electron-rebuild"
- ],
- "peerDependencies": {},
- "optionalDependencies": {},
- "dependencies": {
-    "electron-serve": "latest",
-    "electron-store": "latest"
- },
- "devDependencies": {
-    "@babel/core": "latest",
-    "@zeit/next-css": "latest",
-    "antd": "latest",
-    "babel-loader": "latest",
-    "babel-plugin-import": "latest",
-    "electron": "latest",
-    "electron-builder": "latest",
-    "electron-rebuild": "latest",
-    "next": "latest",
-    "nextron": "latest",
-    "null-loader": "latest",
-    "react": "latest",
-    "react-dom": "latest",
-    "webpack": "latest",
-    "worker-loader": "latest"
- },
- "scripts": {
-    "dev": "nextron",
-    "build": "env NO_PROXY=* nextron build",
-    "postinstall": "env NO_PROXY=* electron-builder install-app-deps"
- },
- "build": {
-   "appId": "online.umbra-translucens.${name}",
-   "productName": "$npm_package_config__exec_basename",
-   "artifactName": "${productName}-${version}__${os}-${arch}.${ext}",
-   "copyright": "Copyright © 2019 ${author}",
-   "maintainer": "${author}",
-   "asar": true,
-   "buildDependenciesFromSource": true,
-   "npmArgs": [],
-   "npmRebuild": true,
-   "nodeGypRebuild": false,
-   "buildVersion": "${version}",
-   "electronCompile": false,
-   "electronDist": "node_modules/electron/dist",
-   "readonly": false,
-   "nodeVersion": "current",
-   "framework": "electron",
-   "remoteBuild": true,
-   "removePackageScripts": true,
-   "compression": "normal",
-   "forceCodeSigning": false,
-   "detectUpdateChannel": true,
-   "generateUpdatesFilesForAllChannels": true,
-   "allowDowngrade": true,
-   "directories": {
-     "output": "dist",
-     "buildResources": "resources",
-     "app": "."
+   "config": {
+      "_name": "$npm_package_name",
+      "_long_name": "Clavis Vitrea Communications App",
+      "_version": "$npm_package_version",
+      "_exec_basename": "ClavisVitreaComms"
    },
-   "files": [
-     "from": ".",
-     "filter": [ "package.json", "app", "LICENSE", "AUTHORS", "README.md" ]
+   "private": true,
+   "publishConfig": {
+      "access": "restricted",
+      "tag": "latest"
+   },
+   "name": "clavis-vitrea-comms",
+   "short_name": "ClavisVitrea:Comms|ᵦ",
+   "description": "Clavis Vitrea Communications App - an unusually secure comms app (chat functionality as seen in typical instant messaging apps and secure peer-to-peer images, documents and generic files exchange. Voice communication is to be introduced later.",
+   "version": "0.1.1-alpha.1",
+   "author": {
+      "name": "Maxim Zhukov",
+      "email": "mzhukov31415dev@gmail.com",
+      "url": "https://github.com/mzhukov1973"
+   },
+   "license": "Apache-2.0",
+   "main": "app/background.js",
+   "engines": {
+      "node": ">=12.8.0"
+   },
+   "os": [
+      "linux"
    ],
-   "extraFiles": [
-     { "from": "resources/app-config-template.json", "to": "app-config.json" }
+   "homepage": "https://clavis-vitrea-comms.umbra-translucens.online",
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/mzhukov1973/clavis-vitrea-comms.git"
+   },
+   "bugs": {
+      "email": "mzhukov31415dev@gmail.com",
+      "url": "https://github.com/mzhukov1973/clavis-vitrea-comms/issues"
+   },
+   "keywords": [
+      "communications",
+      "secure",
+      "encrypted",
+      "messaging",
+      "javascript",
+      "jsx",
+      "next",
+      "react"
    ],
-   "publish": {
-     "publishAutoUpdate": false,
-     "provider": "github",
-      "owner": "mzhukov1973",
-      "vPrefixedTagName": true,
-      "host": "github.com",
-      "protocol": "https",
-      "private": false,
-      "releaseType": "draft"
+   "bundleDependencies": [
+      "electron-rebuild"
+   ],
+   "peerDependencies": {},
+   "optionalDependencies": {},
+   "dependencies": {
+      "electron-serve": "latest",
+      "electron-store": "latest"
    },
-   "releaseInfo": {
-     "releaseName": "${version}",
-     "releaseNotesFile": "release-notes.md",
-     "releaseDate": "2019-08-27"
+   "devDependencies": {
+      "@babel/core": "latest",
+      "@zeit/next-css": "latest",
+      "antd": "latest",
+      "babel-loader": "latest",
+      "babel-plugin-import": "latest",
+      "electron": "latest",
+      "electron-builder": "latest",
+      "electron-rebuild": "latest",
+      "next": "latest",
+      "nextron": "latest",
+      "null-loader": "latest",
+      "react": "latest",
+      "react-dom": "latest",
+      "webpack": "latest",
+      "worker-loader": "latest"
    },
-   "linux": {
-     "target": [ "AppImage", "deb" ]
-     "arch" : "x64",
-     "category": "Network",
-     "icon": "linux/icons",
-     "executableName": "${productName}-${version}__${os}-${arch}",
-     "synopsis": "An unusually secure comms app.",
-     "desktop": {
-       "Terminal": false,
-       "StartupNotify": false,
-       "DBusActivatable": false,
-       "Hidden": false,
-       "NoDisplay": false,
-       "Encoding": "UTF-8"
-     }
+   "scripts": {
+      "dev": "nextron",
+      "build": "env NO_PROXY=* nextron build",
+      "postinstall": "env NO_PROXY=* electron-builder install-app-deps"
    },
-   "appImage": {
-     "license": "LICENSE"
-   },
-   "deb": {
+   "build": {
+      "appId": "online.umbra-translucens.${name}",
+      "productName": "$npm_package_config__exec_basename",
+      "artifactName": "${productName}-${version}__${os}-${arch}.${ext}",
+      "copyright": "Copyright © 2019 ${author}",
+      "maintainer": "${author}",
+      "asar": true,
+      "buildDependenciesFromSource": true,
+      "npmArgs": [],
+      "npmRebuild": true,
+      "nodeGypRebuild": false,
+      "buildVersion": "${version}",
+      "electronCompile": false,
+      "electronDist": "node_modules/electron/dist",
+      "readonly": false,
+      "nodeVersion": "current",
+      "framework": "electron",
+      "remoteBuild": true,
+      "removePackageScripts": true,
+      "compression": "normal",
+      "forceCodeSigning": false,
+      "detectUpdateChannel": true,
+      "generateUpdatesFilesForAllChannels": true,
+      "allowDowngrade": true,
+      "directories": {
+         "output": "dist",
+         "buildResources": "resources"
+      },
+      "files": [
+         {
+            "from": ".",
+            "filter": [
+               "package.json",
+               "app",
+               "LICENSE",
+               "AUTHORS",
+               "README.md"
+            ]
+         },
+         {
+            "from": "resources/linux"
+         }
+      ],
+      "extraFiles": [
+         {
+            "from": "resources/app-config-template.json",
+            "to": "app-config.json"
+         }
+      ],
+      "publish": {
+         "publishAutoUpdate": false,
+         "provider": "github",
+         "owner": "mzhukov1973",
+         "vPrefixedTagName": true,
+         "host": "github.com",
+         "protocol": "https",
+         "private": false,
+         "releaseType": "draft"
+      },
+      "releaseInfo": {
+         "releaseName": "${version}",
+         "releaseNotesFile": "release-notes.md",
+         "releaseDate": "2019-08-27"
+      },
+      "linux": {
+         "target": [
+            "AppImage",
+            "deb"
+         ],
+         "arch": "x64",
+         "category": "Network",
+         "icon": "linux/icons",
+         "executableName": "${productName}-${version}__${os}-${arch}",
+         "synopsis": "An unusually secure comms app.",
+         "desktop": {
+            "Terminal": false,
+            "StartupNotify": false,
+            "DBusActivatable": false,
+            "Hidden": false,
+            "NoDisplay": false,
+            "Encoding": "UTF-8"
+         }
+      },
+      "appImage": {
+         "license": "LICENSE"
+      },
+      "deb": {}
    }
- }
 }
