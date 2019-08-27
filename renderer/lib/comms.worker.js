@@ -1,4 +1,4 @@
-/*React************************************************************************/
+/*JSX**************************************************************************/
 /*  Copyright 2019 Maxim Zhukov                                               */
 /*                                                                            */
 /*  Licensed under the Apache License, Version 2.0 (the "License");           */
@@ -13,22 +13,12 @@
 /*  See the License for the specific language governing permissions and       */
 /*  limitations under the License.                                            */
 /******************************************************************************/
-import   Document                 from "next/document"
-import { Head, Main, NextScript } from "next/document"
 
-class MyDocument extends Document {
-  render = () => (
-    <html lang="en" dir="ltr">
-     <Head>
-      <meta charSet="utf-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1"/>
-     </Head>
-     <body>
-      <Main/>
-      <NextScript/>
-     </body>
-    </html>
-  )
-}
-
-export default MyDocument
+self.addEventListener(
+  'message',
+  ev => {
+//    console.log('[commsWorker] "message" event caught! Replying...')
+    self.postMessage(`[2] Message received ("${ev.data}"). Replying with "[2]World[2]".`)
+//    console.log('[commsWorker] Reply sent.')
+  }
+)

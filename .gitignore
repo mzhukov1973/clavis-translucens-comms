@@ -14,6 +14,8 @@ bower_components
 .lock-wscript
 build_internal
 build
+dist
+app
 node_modules/
 jspm_packages/
 typings/
