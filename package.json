@@ -1,9 +1,6 @@
 {
    "config": {
-      "_name": "$npm_package_name",
-      "_long_name": "Clavis Vitrea Communications App",
-      "_version": "$npm_package_version",
-      "_exec_basename": "ClavisVitreaComms"
+      "long_name": "Clavis Vitrea Communications App"
    },
    "private": true,
    "publishConfig": {
@@ -46,9 +43,7 @@
       "next",
       "react"
    ],
-   "bundleDependencies": [
-      "electron-rebuild"
-   ],
+   "bundleDependencies": [],
    "peerDependencies": {},
    "optionalDependencies": {},
    "dependencies": {
@@ -63,7 +58,6 @@
       "babel-plugin-import": "latest",
       "electron": "latest",
       "electron-builder": "latest",
-      "electron-rebuild": "latest",
       "next": "latest",
       "nextron": "latest",
       "null-loader": "latest",
@@ -75,20 +69,22 @@
    "scripts": {
       "dev": "nextron",
       "build": "env NO_PROXY=* nextron build",
-      "postinstall": "env NO_PROXY=* electron-builder install-app-deps"
+      "build:all": "env NO_PROXY=* nextron build --all",
+      "build:linux": "env NO_PROXY=* nextron build --linux",
+      "postinstall": "env NO_PROXY=* electron-builder install-app-deps",
+      "eb-build": "electron-builder",
+      "eb-build:unpacked": "electron-builder --dir",
+      "eb-build:pack-only": "electron-builder --prepackaged=dist/linux-unpacked"
    },
    "build": {
       "appId": "online.umbra-translucens.${name}",
-      "productName": "$npm_package_config__exec_basename",
+      "productName": "ClavisVitreaComms",
+      "copyright": "Copyright © 2019 Maxim Zhukov",
       "artifactName": "${productName}-${version}__${os}-${arch}.${ext}",
-      "copyright": "Copyright © 2019 ${author}",
-      "maintainer": "${author}",
       "asar": true,
       "buildDependenciesFromSource": true,
-      "npmArgs": [],
       "npmRebuild": true,
       "nodeGypRebuild": false,
-      "buildVersion": "${version}",
       "electronCompile": false,
       "electronDist": "node_modules/electron/dist",
       "readonly": false,
@@ -100,30 +96,34 @@
       "forceCodeSigning": false,
       "detectUpdateChannel": true,
       "generateUpdatesFilesForAllChannels": true,
-      "allowDowngrade": true,
       "directories": {
          "output": "dist",
          "buildResources": "resources"
       },
       "files": [
          {
-            "from": ".",
-            "filter": [
-               "package.json",
-               "app",
-               "LICENSE",
-               "AUTHORS",
-               "README.md"
-            ]
+          "from": ".",
+          "filter": [
+            "package.json",
+            "app"
+          ]
          },
          {
-            "from": "resources/linux"
+          "from": "resources/linux"
          }
       ],
       "extraFiles": [
          {
-            "from": "resources/app-config-template.json",
-            "to": "app-config.json"
+            "from": ".",
+            "filter": [
+              "LICENSE",
+              "AUTHORS",
+              "README.md"
+            ]
+         },
+         {
+          "from": "resources/app-config-template.json",
+          "to": "app-config.json"
          }
       ],
       "publish": {
@@ -137,19 +137,21 @@
          "releaseType": "draft"
       },
       "releaseInfo": {
-         "releaseName": "${version}",
-         "releaseNotesFile": "release-notes.md",
-         "releaseDate": "2019-08-27"
+         "releaseNotesFile": "release-notes.md"
       },
       "linux": {
          "target": [
-            "AppImage",
-            "deb"
+            {
+             "target": "AppImage",
+             "arch":"x64"
+            },
+            {
+             "target": "deb",
+             "arch":"x64"
+            }
          ],
-         "arch": "x64",
-         "category": "Network",
+         "category": "Network;Chat;",
          "icon": "linux/icons",
-         "executableName": "${productName}-${version}__${os}-${arch}",
          "synopsis": "An unusually secure comms app.",
          "desktop": {
             "Terminal": false,
@@ -163,6 +165,8 @@
       "appImage": {
          "license": "LICENSE"
       },
-      "deb": {}
+      "deb": {
+        "packageCategory": "net"
+      }
    }
 }
