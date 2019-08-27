@@ -75,7 +75,7 @@
  "scripts": {
     "dev": "nextron",
     "build": "env NO_PROXY=* nextron build",
-    "postinstall": "env NO_PROXY=* electron-builder install-app-deps",
+    "postinstall": "env NO_PROXY=* electron-builder install-app-deps"
  },
  "build": {
    "appId": "online.umbra-translucens.${name}",
