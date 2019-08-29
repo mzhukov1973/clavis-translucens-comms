@@ -8,5 +8,4 @@
 ##### Notes:
  - Now is in a [meta](https://github.com/mateodelnorte/meta) [monorepo](https://github.com/mzhukov1973/clavis-vitrea-comms-meta-monorepo).
 ##### Roadmap:
- - A placeholder item - trying out Zulip integration
- - A second placeholder item.
+ - ...
