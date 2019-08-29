@@ -74,7 +74,8 @@
       "postinstall": "env NO_PROXY=* electron-builder install-app-deps",
       "eb-build": "electron-builder",
       "eb-build:unpacked": "electron-builder --dir",
-      "eb-build:pack-only": "electron-builder --prepackaged=dist/linux-unpacked"
+      "eb-build:pack-only": "electron-builder --prepackaged=dist/linux-unpacked",
+      "eb-publish":"electron-builder --publish onTagOrDraft"
    },
    "build": {
       "appId": "online.umbra-translucens.${name}",
