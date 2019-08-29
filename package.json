@@ -75,7 +75,7 @@
       "eb-build": "electron-builder",
       "eb-build:unpacked": "electron-builder --dir",
       "eb-build:pack-only": "electron-builder --prepackaged=dist/linux-unpacked",
-      "eb-publish":"electron-builder --publish onTagOrDraft"
+      "eb-publish": "electron-builder --publish onTagOrDraft"
    },
    "build": {
       "appId": "online.umbra-translucens.${name}",
@@ -103,28 +103,28 @@
       },
       "files": [
          {
-          "from": ".",
-          "filter": [
-            "package.json",
-            "app"
-          ]
+            "from": ".",
+            "filter": [
+               "package.json",
+               "app"
+            ]
          },
          {
-          "from": "resources/linux"
+            "from": "resources/linux"
          }
       ],
       "extraFiles": [
          {
             "from": ".",
             "filter": [
-              "LICENSE",
-              "AUTHORS",
-              "README.md"
+               "LICENSE",
+               "AUTHORS",
+               "README.md"
             ]
          },
          {
-          "from": "resources/app-config-template.json",
-          "to": "app-config.json"
+            "from": "resources/app-config-template.json",
+            "to": "app-config.json"
          }
       ],
       "publish": {
@@ -143,12 +143,12 @@
       "linux": {
          "target": [
             {
-             "target": "AppImage",
-             "arch":"x64"
+               "target": "AppImage",
+               "arch": "x64"
             },
             {
-             "target": "deb",
-             "arch":"x64"
+               "target": "deb",
+               "arch": "x64"
             }
          ],
          "category": "Network;Chat;",
@@ -167,7 +167,7 @@
          "license": "LICENSE"
       },
       "deb": {
-        "packageCategory": "net"
+         "packageCategory": "net"
       }
    }
 }
