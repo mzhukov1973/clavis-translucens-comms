@@ -5,6 +5,8 @@
 ##### Author: *Maxim Zhukov ([`mzhukov31415dev@gmail.com`](mailto:mzhukov31415dev@gmail.com) / [`GitHub`](https://github.com/mzhukov1973))*
 ##### Version: *`0.1.1-alpha.1`*
 ##### License: *Apache 2.0*
+##### Notes:
+ - Now is in a [meta](https://github.com/mateodelnorte/meta) [monorepo](https://github.com/mzhukov1973/clavis-vitrea-comms-meta-monorepo).
 ##### Roadmap:
  - A placeholder item - trying out Zulip integration
  - A second placeholder item.
